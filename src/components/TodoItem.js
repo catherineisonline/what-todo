@@ -6,6 +6,13 @@ const TodoItem = ({ id, title, completed }) => {
   const dispatch = useDispatch();
   const markCompleted = () => {
     dispatch(markComplete({ id, completed: !completed }));
+    const listItem = document.querySelector(".todo-item");
+    if (!completed) {
+      listItem.classList.add("completed");
+    }
+    if (completed) {
+      listItem.classList.remove("completed");
+    }
   };
   const deleteAction = () => {
     dispatch(deleteItem({ id }));
