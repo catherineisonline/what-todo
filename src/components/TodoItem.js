@@ -4,16 +4,20 @@ import { useDispatch } from "react-redux";
 import { markComplete, deleteItem } from "../redux/todoSlice";
 const TodoItem = ({ id, title, completed }) => {
   const dispatch = useDispatch();
-  const markCompleted = () => {
+
+  const markCompleted = (e) => {
     dispatch(markComplete({ id, completed: !completed }));
-    const listItem = document.querySelector(".todo-item");
+    // const listItem = document.querySelectorAll(".todo-item");
+    // console.log(listItem);
+
     if (!completed) {
-      listItem.classList.add("completed");
+      e.target.classList.add("completed");
     }
     if (completed) {
-      listItem.classList.remove("completed");
+      e.target.classList.remove("completed");
     }
   };
+
   const deleteAction = () => {
     dispatch(deleteItem({ id }));
   };
