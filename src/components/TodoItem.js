@@ -1,42 +1,74 @@
 import React from "react";
+import { useState } from "react";
 //Redux
+
 import { useDispatch } from "react-redux";
 import { markComplete, deleteItem } from "../redux/todoSlice";
 const TodoItem = ({ id, title, completed }) => {
   const dispatch = useDispatch();
+  const [isActive, setActive] = useState(false);
 
-  const markCompleted = (e) => {
+  const markCompleteds = () => {
     dispatch(markComplete({ id, completed: !completed }));
-    // const listItem = document.querySelectorAll(".todo-item");
-    // console.log(listItem);
-
-    if (!completed) {
-      e.target.classList.add("completed");
-    }
-    if (completed) {
-      e.target.classList.remove("completed");
-    }
+    setActive(!isActive);
   };
 
   const deleteAction = () => {
     dispatch(deleteItem({ id }));
   };
+
   return (
-    <li className="todo-item">
-      <section className="item">
-        <label class="item-name">
-          <input type="checkbox"></input>
-          <div
-            class="checkmark smooth-transition"
-            onClick={markCompleted}
-          ></div>
-        </label>
-        <p>{title}</p>
-      </section>
-      <section>
-        <button onClick={deleteAction}>X</button>
-      </section>
-    </li>
+    <>
+      {isActive ? (
+        <li className="todo-item completed">
+          <section className="item">
+            <label className="item-name">
+              <input
+                type="checkbox"
+                onClick={() => {
+                  markCompleteds();
+                }}
+              ></input>
+              <div className="checkmark smooth-transition"></div>
+            </label>
+            <p>{title}</p>
+          </section>
+          <section>
+            <button
+              onClick={() => {
+                deleteAction();
+              }}
+            >
+              X
+            </button>
+          </section>
+        </li>
+      ) : (
+        <li className="todo-item">
+          <section className="item">
+            <label className="item-name">
+              <input
+                type="checkbox"
+                onClick={() => {
+                  markCompleteds();
+                }}
+              ></input>
+              <div className="checkmark smooth-transition"></div>
+            </label>
+            <p>{title}</p>
+          </section>
+          <section>
+            <button
+              onClick={() => {
+                deleteAction();
+              }}
+            >
+              X
+            </button>
+          </section>
+        </li>
+      )}
+    </>
   );
 };
 

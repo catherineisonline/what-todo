@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;1,400&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;1,400&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 :root {
-  --body-font: "Titillium Web", sans-serif;
+  /* --body-font: "Titillium Web", sans-serif; */
   --title-font: "DM Serif Display", serif;
   --body-bg: #e3dafc;
   --white: white;
@@ -22,7 +22,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  font-family: var(--body-font);
+  /* font-family: var(--body-font); */
+  /* font-family: var(--title-font); */
   background-color: var(--body-bg);
 }
 body::-webkit-scrollbar {
