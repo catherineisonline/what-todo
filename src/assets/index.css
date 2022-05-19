@@ -67,8 +67,8 @@ h1 {
 }
 
 .dark {
-  background-color: rgb(64, 42, 156);
-  color: rgb(154, 126, 245)
+  background-color: #402a9c;
+  color: rgb(154, 126, 245);
 }
 .dark .todo-section {
   background: rgb(108, 70, 255);
@@ -80,7 +80,7 @@ h1 {
   );
 }
 .dark .toggle-light {
-  color: rgb(154, 126, 245)
+  color: rgb(154, 126, 245);
 }
 
 /* TODO SECTION */

@@ -1,6 +1,8 @@
-<img src=""></img>
+<img src="https://github.com/catherineisonline/what-todo/blob/main/public/project-preview.png?raw=true"></img>
 
 # What Todo - A simple to do list
+
+This is a simple to do list project to try myself out in Redux. 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
