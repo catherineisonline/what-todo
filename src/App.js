@@ -6,19 +6,23 @@ import ToggleMode from "./components/ToggleMode";
 
 const App = () => {
   return (
-    <main>
-      <section className="title-section">
-        <h1>What Todo</h1>
-        <ToggleMode />
-      </section>
-      <section className="todo-section">
-        <AddTodoForm />
-        <TodoList />
-      </section>
-      <section className="summary-section">
+    <>
+      <header>
+        <section className="title-section">
+          <h1>What Todo</h1>
+          <ToggleMode />
+        </section>
+      </header>
+      <main>
+        <section className="todo-section">
+          <AddTodoForm />
+          <TodoList />
+        </section>
+      </main>
+      <footer className="summary-section">
         <TotalCompleteItems />
-      </section>
-    </main>
+      </footer>
+    </>
   );
 };
 

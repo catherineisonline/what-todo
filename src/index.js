@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+//Styles
+import "../src/assets/index.css";
+import "../src/assets/responsive.css"
 import App from "./App";
 //Redux
 import store from "./redux/store";

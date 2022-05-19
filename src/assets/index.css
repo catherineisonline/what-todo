@@ -1,7 +1,5 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;1,400&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
 :root {
-  /* --body-font: "Titillium Web", sans-serif; */
   --title-font: "DM Serif Display", serif;
   --body-bg: #e3dafc;
   --white: white;
@@ -22,8 +20,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  /* font-family: var(--body-font); */
-  /* font-family: var(--title-font); */
   background-color: var(--body-bg);
 }
 body::-webkit-scrollbar {
@@ -46,12 +42,10 @@ li {
 main {
   width: 90%;
   margin: 0 auto;
-  margin-top: 20%;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
 }
-main h1 {
+h1 {
   font-family: var(--title-font);
   text-transform: uppercase;
   font-size: 2rem;
@@ -59,20 +53,39 @@ main h1 {
 }
 
 .title-section {
+  padding: 2rem;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
 }
-/* TOGGLE */
+/* TOGGLE MODE */
 .toggle-light,
 .toggle-dark {
   font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: rgb(64, 42, 156);
+  color: rgb(154, 126, 245)
+}
+.dark .todo-section {
+  background: rgb(108, 70, 255);
+  background: linear-gradient(
+    6deg,
+    rgba(108, 70, 255, 1) 31%,
+    rgb(102, 69, 211) 67%,
+    rgb(108, 85, 168) 100%
+  );
+}
+.dark .toggle-light {
+  color: rgb(154, 126, 245)
 }
 
 /* TODO SECTION */
 .todo-section {
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   gap: 1rem;
   background: rgb(108, 70, 255);
@@ -83,7 +96,11 @@ main h1 {
     rgba(201, 183, 246, 1) 100%
   );
   border-radius: 25px;
-  padding: 2rem;
+  padding: 1.2rem;
+  margin: 0 auto;
+  width: auto;
+  min-width: 10rem;
+  max-width: 22rem;
 
   -webkit-box-shadow: 1px 8px 26px -8px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 1px 8px 26px -8px rgba(0, 0, 0, 0.7);
@@ -116,6 +133,7 @@ main h1 {
   color: var(--white);
   font-family: var(--body-font);
   font-weight: 400;
+  font-size: 1.2rem;
 }
 
 .form-input button {
@@ -129,7 +147,8 @@ main h1 {
     rgba(201, 183, 246, 1) 100%
   );
   padding: 1.3rem;
-  color: var(--white);
+  color: rgba(201, 183, 246, 1);
+  font-size: 1.2rem;
 }
 
 /* TodoList */
@@ -236,8 +255,13 @@ main h1 {
   gap: 2rem;
   align-items: center;
   height: 5rem;
+  max-width: 22rem;
+  margin: auto;
 }
 /* DELETE BUTTON */
+.todo-item {
+  font-size: 1.1rem;
+}
 .todo-item button {
   color: rgb(108, 70, 255);
   background-color: transparent;
@@ -247,6 +271,9 @@ main h1 {
 }
 .todo-item.completed button {
   color: var(--red);
+}
+.todo-item.completed p {
+  text-decoration: line-through;
 }
 /* TRANSITIONS */
 .smooth-transition {

@@ -24,7 +24,7 @@ const AddTodoForm = () => {
       ></input>
 
       <button className="smooth-transition" type="submit ">
-        Add
+        +
       </button>
     </form>
   );
