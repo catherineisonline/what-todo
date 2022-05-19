@@ -1,22 +1,18 @@
 import React from "react";
 import { useState } from "react";
 //Redux
-
 import { useDispatch } from "react-redux";
 import { markComplete, deleteItem } from "../redux/todoSlice";
 const TodoItem = ({ id, title, completed }) => {
   const dispatch = useDispatch();
   const [isActive, setActive] = useState(false);
-
   const markCompleteds = () => {
     dispatch(markComplete({ id, completed: !completed }));
     setActive(!isActive);
   };
-
   const deleteAction = () => {
     dispatch(deleteItem({ id }));
   };
-
   return (
     <>
       {isActive ? (

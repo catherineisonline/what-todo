@@ -1,5 +1,4 @@
 import { FaMoon, FaSun } from "react-icons/fa";
-
 import { useState } from "react";
 
 export default function ToggleMode() {
@@ -11,13 +10,13 @@ export default function ToggleMode() {
   return (
     <section className="toggle" onClick={changeTheme}>
       {darkMode ? (
-        <div className="toggle-light">
+        <section className="toggle-light">
           <FaSun />
-        </div>
+        </section>
       ) : (
-        <div className="toggle-dark">
+        <section className="toggle-dark">
           <FaMoon />
-        </div>
+        </section>
       )}
     </section>
   );

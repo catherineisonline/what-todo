@@ -9,7 +9,6 @@ const TotalCompleteItems = () => {
   const uncompleted = useSelector((state) =>
     state.todos.filter((todo) => todo.completed === false)
   );
-
   return (
     <section className="total-complete-items">
       <p>Tasks: {uncompleted.length}</p>
