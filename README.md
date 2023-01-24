@@ -2,7 +2,9 @@
 
 # What Todo - A simple to do list
 
-This is a simple to do list project to try myself out in Redux. 
+What Todo is a simple to-do list application that was created as a practice project to introduce the use of Redux for the first time.
+The project is built using React and CSS. The application allows users to create and manage a list of tasks, and can include features such as adding new tasks, editing existing tasks, marking tasks as completed, and deleting tasks. Additionally, the project is built with Redux, a JavaScript library for managing application state, making it easy to manage the state of the to-do list, and providing a predictable and consistent way of handling updates and changes to the data. The goal of this project is to provide a simple and easy to use to-do list application while practicing the use of Redux and its concepts such as actions, reducers, and store.
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
