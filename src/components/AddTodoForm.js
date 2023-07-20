@@ -17,11 +17,11 @@ const AddTodoForm = () => {
       <input
         id="todo-input"
         type="text"
-        placeholder="Add Todo..."
+        placeholder="Create a new todo..."
         value={value}
         onChange={(event) => setValue(event.target.value)}
-      ></input>
-      <button className="smooth-transition" type="submit ">
+      />
+      <button className="smooth-transition" type="submit">
         +
       </button>
     </form>

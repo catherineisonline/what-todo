@@ -24,13 +24,14 @@ const TodoItem = ({ id, title, completed }) => {
                 onClick={() => {
                   markCompleteds();
                 }}
-              ></input>
+              />
               <div className="checkmark smooth-transition"></div>
             </label>
             <p>{title}</p>
           </section>
           <section>
             <button
+              className="delete-btn"
               onClick={() => {
                 deleteAction();
               }}
@@ -48,13 +49,14 @@ const TodoItem = ({ id, title, completed }) => {
                 onClick={() => {
                   markCompleteds();
                 }}
-              ></input>
+              />
               <div className="checkmark smooth-transition"></div>
             </label>
             <p>{title}</p>
           </section>
           <section>
             <button
+              className="delete-btn"
               onClick={() => {
                 deleteAction();
               }}

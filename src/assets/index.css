@@ -2,9 +2,23 @@
 :root {
   --title-font: "DM Serif Display", serif;
   --body-bg: #e3dafc;
-  --white: white;
+  --white: #ffffff;
   --green: #5cc6bf;
-  --red: red;
+  --red: #ff0000;
+  --glass-gray: #ffffff26;
+  --bright-purple: #6c46ff;
+  --dark-purple: #402a9c;
+  --light-purple: #9a7ef5;
+  --rose-purple: #c9b7f6;
+  --box-shadow: 1px 8px 26px -8px rgba(0, 0, 0, 0.7);
+  --purple-gradient: linear-gradient(6deg, rgba(108, 70, 255, 1) 31%, rgb(102, 69, 211) 67%, rgb(108, 85, 168) 100%);
+  --light-purple-gradient: linear-gradient(
+    6deg,
+    rgba(108, 70, 255, 1) 31%,
+    rgba(163, 137, 250, 1) 67%,
+    rgba(201, 183, 246, 1) 100%
+  );
+  --two-color-gradient: linear-gradient(6deg, rgba(108, 70, 255, 1) 7%, rgba(201, 183, 246, 1) 100%);
 }
 /* GENERAL STYLING */
 * {
@@ -63,20 +77,15 @@ main {
   cursor: pointer;
 }
 .dark {
-  background-color: #402a9c;
-  color: rgb(154, 126, 245);
+  background-color: var(--dark-purple);
+  color: var(--light-purple);
 }
 .dark .todo-section {
-  background: rgb(108, 70, 255);
-  background: linear-gradient(
-    6deg,
-    rgba(108, 70, 255, 1) 31%,
-    rgb(102, 69, 211) 67%,
-    rgb(108, 85, 168) 100%
-  );
+  background: var(--bright-purple);
+  background: var(--purple-gradient);
 }
 .dark .toggle-light {
-  color: rgb(154, 126, 245);
+  color: var(--light-purple);
 }
 
 /* TODO SECTION */
@@ -84,21 +93,16 @@ main {
   display: inline-flex;
   flex-direction: column;
   gap: 1rem;
-  background: rgb(108, 70, 255);
-  background: linear-gradient(
-    6deg,
-    rgba(108, 70, 255, 1) 31%,
-    rgba(163, 137, 250, 1) 67%,
-    rgba(201, 183, 246, 1) 100%
-  );
+  background: var(--bright-purple);
+  background: var(--light-purple-gradient);
   border-radius: 25px;
   padding: 1.2rem;
   margin: 0 auto;
   width: auto;
   max-width: 22rem;
-  -webkit-box-shadow: 1px 8px 26px -8px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 1px 8px 26px -8px rgba(0, 0, 0, 0.7);
-  box-shadow: 1px 8px 26px -8px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: var(--box-shadow);
+  -moz-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
 }
 
 /* FORM */
@@ -106,14 +110,14 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  -webkit-box-shadow: 1px 8px 26px -8px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 1px 8px 26px -8px rgba(0, 0, 0, 0.7);
-  box-shadow: 1px 8px 26px -8px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: var(--box-shadow);
+  -moz-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
   border-radius: 10px;
 }
 
 .form-input input {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--glass-gray);
   backdrop-filter: blur(5px);
   border: 1px solid transparent;
   outline: none;
@@ -127,20 +131,17 @@ main {
   font-family: var(--body-font);
   font-weight: 400;
   font-size: 1.2rem;
+  padding: 5px;
 }
 
 .form-input button {
   cursor: pointer;
   border: none;
   border-radius: 0 10px 10px 0;
-  background: rgb(108, 70, 255);
-  background: linear-gradient(
-    6deg,
-    rgba(108, 70, 255, 1) 7%,
-    rgba(201, 183, 246, 1) 100%
-  );
+  background: var(--bright-purple);
+  background: var(--two-color-gradient);
   padding: 1.3rem;
-  color: rgba(201, 183, 246, 1);
+  color: var(--rose-purple);
   font-size: 1.2rem;
 }
 
@@ -157,13 +158,15 @@ main {
   justify-content: space-between;
   align-items: center;
   color: var(--white);
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--glass-gray);
   backdrop-filter: blur(5px);
-  -webkit-box-shadow: 1px 8px 26px -8px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: 1px 8px 26px -8px rgba(0, 0, 0, 0.7);
-  box-shadow: 1px 8px 26px -8px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: var(--box-shadow);
+  -moz-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
   border-radius: 10px;
   padding: 1rem;
+  font-family: var(--body-font);
+  font-size: 1.2rem;
 }
 .todo-item.completed {
   background-color: var(--green);
@@ -200,15 +203,10 @@ main {
 .checkmark {
   height: 20px;
   width: 20px;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--glass-gray);
   backdrop-filter: blur(5px);
   border-radius: 50%;
   cursor: pointer;
-}
-
-/* On mouse-over, add a grey background color */
-.item-name:hover input ~ .checkmark {
-  opacity: 0.7;
 }
 
 /* When the radio button is checked, add a blue background */
@@ -234,7 +232,7 @@ main {
   top: 5px;
   width: 5px;
   height: 10px;
-  border: solid white;
+  border: solid var(--white);
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
@@ -255,26 +253,41 @@ main {
 .todo-item {
   font-size: 1.1rem;
 }
-.todo-item button {
-  color: rgb(108, 70, 255);
+.delete-btn {
+  color: var(--bright-purple);
   background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 1.3rem;
+  padding: 5px;
 }
-.todo-item.completed button {
+.todo-item.completed .delete-btn {
   color: var(--red);
+  padding: 5px;
 }
 .todo-item.completed p {
   text-decoration: line-through;
 }
 /* TRANSITIONS */
-.smooth-transition {
+.smooth-transition,
+.checkmark,
+.delete-btn,
+.todo-item.completed .delete-btn {
   transition: all ease-in-out 0.3s;
 }
 
 @media (hover: hover) {
   .form-input button:hover {
     opacity: 0.6;
+    transition: all ease-in-out 0.3s;
+  }
+  .checkmark:hover {
+    background-color: var(--bright-purple);
+    transition: all ease-in-out 0.3s;
+  }
+  .delete-btn:hover,
+  .todo-item.completed .delete-btn:hover {
+    color: var(--white);
+    transition: all ease-in-out 0.3s;
   }
 }
