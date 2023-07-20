@@ -13,7 +13,7 @@ ReactDOM.render(
     <Router>
       <Provider store={store}>
         <Routes>
-          <Route path="/what-todo" element={<App />} />
+          <Route path="/" element={<App />} />
         </Routes>
       </Provider>
     </Router>
