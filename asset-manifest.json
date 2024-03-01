@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/catherineisonline/what-todo/static/css/main.4a29d239.css",
-    "main.js": "/catherineisonline/what-todo/static/js/main.249156a0.js",
-    "index.html": "/catherineisonline/what-todo/index.html",
-    "main.4a29d239.css.map": "/catherineisonline/what-todo/static/css/main.4a29d239.css.map",
-    "main.249156a0.js.map": "/catherineisonline/what-todo/static/js/main.249156a0.js.map"
+    "main.css": "/what-todo/static/css/main.4a29d239.css",
+    "main.js": "/what-todo/static/js/main.249156a0.js",
+    "index.html": "/what-todo/index.html",
+    "main.4a29d239.css.map": "/what-todo/static/css/main.4a29d239.css.map",
+    "main.249156a0.js.map": "/what-todo/static/js/main.249156a0.js.map"
   },
   "entrypoints": [
     "static/css/main.4a29d239.css",
