@@ -17,7 +17,7 @@
     "redux-logger": "^3.0.6",
     "web-vitals": "^1.0.1"
   },
-  "homepage": "https://github.com/catherineisonline/what-todo",
+  "homepage": "/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
