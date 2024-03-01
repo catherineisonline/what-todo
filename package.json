@@ -1,8 +1,7 @@
 {
   "name": "todo-app",
   "version": "0.1.0",
-  "private": true,
-  "homepage": "https://catherineisonline.github.io/what-todo/",
+  "homepage": "https://catherineisonline.github.io/what-todo",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.0",
     "@testing-library/jest-dom": "^5.11.4",
