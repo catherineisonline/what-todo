@@ -10,10 +10,10 @@ import { Provider } from "react-redux";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename={process.env.REACT_APP_URI}>
       <Provider store={store}>
         <Routes>
-          <Route path="/" element={<App />} />
+          <Route path="/what-todo" element={<App />} />
         </Routes>
       </Provider>
     </Router>
