@@ -2,6 +2,7 @@
   "name": "todo-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/catherineisonline/what-todo/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.0",
     "@testing-library/jest-dom": "^5.11.4",
@@ -17,7 +18,6 @@
     "redux-logger": "^3.0.6",
     "web-vitals": "^1.0.1"
   },
-  "homepage": "https://github.com/catherineisonline/what-todo/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
